@@ -1,0 +1,58 @@
+
+.container-about {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.madeira {
+    height: 300px;
+    width: auto;
+    border-radius: 45px;
+    float: right;
+    margin-left: 10px;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    color: $primary-text-color;
+    margin: 100px 0 100px 0;
+}
+
+.intro article {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro article h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Bungee Spice', cursive;
+}
+
+.intro article h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Bungee Spice', cursive;
+}
+
+.intro article p {
+    font-size: 25px;
+    margin: 30px 0 30px 0;
+}
+
+.Dork {
+    height: 300px;
+    width: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 45px;
+}
+
+br {
+    line-height: 150%;
+}

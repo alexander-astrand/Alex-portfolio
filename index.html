@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alex Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Style/style.css">
+        <link rel="stylesheet" href="Style/normalize.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@700&family=Pacifico&family=Rubik&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+Mono:wght@700&family=Pacifico&family=Rubik&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Merriweather&family=Noto+Sans+Mono:wght@700&family=Pacifico&family=Rubik&display=swap" rel="stylesheet">
+                
+    </head>
+    <body>
+        <div class="home-page">
+            <header class="navbar">
+                <nav>
+                    <div class="name">
+                        <a href="index.html"> <img src="Style/images/ethereum.png" alt=""> Alexander Åstrand </a>
+                    </div>
+                    <button id="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="menu">
+                        <ul class="menu2">
+                            <li><a href="index.html"> Home </a></li>
+                            <li><a href="Work.html"> Work </a></li>
+                            <li><a href="Blog.html"> Blog </a></li>
+                            <li><a href="About.html"> About </a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main class="container"> 
+                <section class="title">
+                    <div>
+                        <h1>
+                            Hi my name is <span>Alex!</span>
+                            <br>I am an aspiring blockchain developer
+                            <br>on my way towards becoming a fullstack Web 3.0 developer
+                        </h1>
+                    </div>
+                    <div class="contact-me">
+                        <button>Contact me!</button>
+                    </div>
+
+                </section>
+
+                <section class="card-box">
+                    <H1 class="heading-boxes">Featured Posts:</H1>
+                    <div class="band">
+                        <div class="item-1">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/cryptocurrency.jpg);"></div>
+                                <article>
+                                <h1>Thoughts on the latest crypto news</h1>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="item-2">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/Texture.jpg);"></div>
+                                <article>
+                                <h1></h1>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="item-2">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/Texture.jpg);"></div>
+                                <article>
+                                <h1></h1>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="item-2">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/Texture.jpg);"></div>
+                                <article>
+                                <h1></h1>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="item-2">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/Texture.jpg);"></div>
+                                <article>
+                                <h1></h1>
+                                </article>
+                            </a>
+                        </div>
+                        <div class="item-2">
+                            <a href="" class="card">
+                                <div class="thumb" style="background-image: url(Style/images/Texture.jpg);"></div>
+                                <article>
+                                <h1></h1>
+                                </article>
+                            </a>
+                        </div>
+                    </div>                    
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-box">
+                    <img src="Style/images/ethereum.png" alt="">
+                    <div>
+                    Alexander Åstrand
+                    </div> 
+                    <div class="favicons">
+                    <a href="https://github.com/alexander-astrand" target="_blank"><img src="Style/images/GitHub-Mark-Light-32px.png" alt=""></a>  
+                    <a href="https://linkedin.com/in/alexander-åstrand-145662106" target="_blank"><img src="Style/images/317725_linkedin_social_icon.png" alt=""></a> 
+                    </div>
+                </div>
+                    
+            </footer>
+
+        </div>
+
+        <script>
+            const menuBtn = document.querySelector('#menu-button');
+            menuBtn.addEventListener('click', () => {
+                menuBtn.classList.toggle('menu-open');
+            });
+    
+            document.getElementById("Accept-button").onclick = function () {
+                document.getElementById("cookies").style.display = "none";
+            }
+        </script>
+        
+    </body>
+    
+</html>
