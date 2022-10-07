@@ -1,0 +1,80 @@
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 1.5em;
+}
+
+input[type=submit] {
+  background-color: $primary-text-color;
+  padding: 12px 20px;
+  width: 130px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: $secondary-text-color;
+  color: white;
+}
+
+.contact-container {
+  border-radius: 45px;
+  background-color: rgb(9, 4, 74);
+  padding: 40px;
+  width: 50%;
+
+  label {
+    font-family: $spicy-font;
+    font-size: 2em;
+  }
+
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 100px;
+
+  h1 {
+    font-family: $spicy-font;
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: $primary-text-color;
+  }
+}
+
+#subject {
+  height: 200px;
+}
+
+.container-thankyou {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  font-family: $spicy-font;
+    h1 {
+      font-size: 2em;
+        p {
+          font-size: 1.5em;
+        }
+    }
+}
+

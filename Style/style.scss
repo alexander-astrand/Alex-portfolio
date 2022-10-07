@@ -1,69 +1,63 @@
+@import 'normalize';
 
 $primary-text-color: #2EE59D;
+$secondary-text-color: #bf3261;
 $spicy-font: 'Bungee Spice', cursive;
 
-/* 
+
+
 @function pxToEM($px) {
-  $return ($px / 16);
+  @return ($px / 16) * 1rem;
 }
- */
 
- $debugging: false;
-
- div {
-  @if $debugging {
-      outline: 1px solid black;
-      background-color: gray;
-  }
- }
 
 body {
-    box-sizing: border-box;
-    margin: auto;
-    font-family: 'Noto Sans Mono', monospace;
-    background: #41295a;
-    background: -webkit-linear-gradient(to right, #2F0743, #41295a);  
-    background: linear-gradient(to right, #2F0743, #41295a); 
+  box-sizing: border-box;
+  margin: auto;
+  font-family: 'Noto Sans Mono', monospace;
+  background: #41295a;
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+  background: linear-gradient(to right, #2F0743, #41295a);
 }
 
 .home-page {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    position: relative;
-   
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
 }
 
 .navbar {
-    padding: 30px 0 10px 0;
-  
-    flex: none;
+  padding: 30px 0 10px 0;
+  flex: none;
 }
 
 .navbar nav {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
 }
-
 
 .menu2 {
   display: flex;
   flex-direction: row;
   gap: 100px;
-    li {
+
+  li {
     display: inline;
     list-style: none;
-    font-size: pxToEM (20);
+    font-size: 20px;
     transition: all 0.3s ease 0s;
-      a {
+
+    a {
       text-decoration: none;
       color: #2EE59D;
-        &:hover {
+
+      &:hover {
         border-radius: 45px;
         padding: 0.8em;
         margin: 0 -1em;
@@ -73,26 +67,32 @@ body {
         color: white;
         box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
         transition: all 0.3s ease 0s;
-        }
       }
     }
   }
-
-.name a {
-    text-decoration: none;
-    font-size: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-family: $spicy-font;
 }
 
-.name a img {
-  width: 34px;
-  height: 34px;
+.name {
+  display: flex;
+  gap: 15px;
+  a {
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: $spicy-font;
+  }
+    a:hover {
+      border-bottom: 4px  solid $primary-text-color;
+    }
+    img {
+    width: 34px;
+    height: 34px;
+    }
 }
 
-.name:hover {
+/* .name:hover {
   a {
     color: white;
     font-family: 'Bungee Spice', cursive;
@@ -104,35 +104,68 @@ body {
   background-color: #2EE59D;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   transition: all 0.3s ease 0s;
-}
+} */
 
 .container {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -30px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 0;
+  gap: 10px;
+}
+
+.waviy span {
+  flex-grow: 0;
+  position: relative;
+  display: inline-block;
+  color: $primary-text-color;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  font-size: 3em;
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
 }
 
 .title {
-   box-sizing: content-box;
-   
+  box-sizing: content-box;
+  margin: 150px 0 150px 0;
 }
 
-.title div {
-    margin: 150px 0 150px 0;
-    width: 100%;
+.Alex-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 3rem;
+  color: $primary-text-color;
+  line-height: 1.4;
+  align-items: baseline; 
 }
 
-.title div h1 {
-    font-size: 3rem;
-    color: $primary-text-color;
-    line-height: 1.4;
+.title-box2 {
+  display: flex;
+  font-size: 3rem;
+  color: $primary-text-color;
+  line-height: 1.4;
 }
 
-.title div h1 span {
+.title-box span {
   font-family: 'Bungee Spice', cursive;
   font-size: 70px;
 }
@@ -142,6 +175,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 }
 
 .contact-me button {
@@ -159,7 +193,7 @@ body {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  }
+}
 
 .contact-me button:hover {
   background-color: #bf3261;
@@ -174,113 +208,249 @@ body {
 }
 
 .band {
-    max-width: 1400px;
-    margin: 0 auto;
-    
-    display: grid;
-    
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 80px;
-    margin: 50px 0 50px 0;
-    
-  }
+  max-width: 1400px;
+  margin: 0 auto;
 
-  .card {
-    min-height: 100%;
-    background: $primary-text-color;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: #444;
-    position: relative;
-    top: 0;
-    transition: all .1s ease-in;
-    border-radius: 25px;
-  }
-  
-  .card:hover {
-    top: -2px;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    background-color: #bf3261;
-    
-  }
-  
-  .card article {
-    padding: 20px;
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    flex-direction: column;
-    
-  }
-  .card .thumb {
-    padding-bottom: 60%;
-    background-size: cover;
-    background-position: center center;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-  }
+  display: grid;
 
-  .footer {
-    border-top: 1px solid grey;
-    height: auto;
-    flex: none;
-    padding: 20px 0 20px 0;
-    box-sizing: inherit;
-    color: #bf3261;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 80px;
+  margin: 50px 0 50px 0;
 
-  .footer-box {
-      width: 80%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1400px;
-  }
+}
 
-  .footer-box img {
-    height: 32px;
-    width: 32px;
-  }
+.card {
+  min-height: 100%;
+  background: $primary-text-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+  border-radius: 45px;
+}
 
-  .footer-box div {
-    font-family: 'Bungee Spice', cursive;
-  }
-
-  .favicons {
-    display: flex;
-    gap: 14px;
-  }
-    
-
-  @media only screen and (max-width: 850px) {
-    
-    @import '_tablet';
-  
-  }
-
-  @media only screen and (max-width: 500px) {
-    
-    @import '_mobile';
-  
-  }
-
-  @import '_About';
-
-  @import '_Work';
-
-  @media only screen and (min-width: 850px) {
-    
-    #menu-button {
-      display: none;
+.thumb1:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
     }
+
+}
+
+.thumb1 {
+  background: rgba(0, 0, 0, 0.7) url(Images/decentraland-main.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb2 { 
+  background: rgba(0, 0, 0, 0.7) url(Images/5bfd567a-e93f-4d78-9f37-38e47f4c647f-Top_Shot_art.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb2:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
+    }
+}
+.thumb3 { 
+  background: rgba(0, 0, 0, 0.7) url(Images/pascal-bernardon-zt0HWquGXlQ-unsplash.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb3:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
+    }
+}
+.thumb4 { 
+  background: rgba(0, 0, 0, 0.7) url(Images/kelly-sikkema-6AAsdlyvPD8-unsplash.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb4:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
+    }
+}
+.thumb5 { 
+  background: rgba(0, 0, 0, 0.7) url(Images/guerrillabuzz-crypto-pr-UxDU0Gg5pqQ-unsplash.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb5:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
+    }
+}
+.thumb6 { 
+  background: rgba(0, 0, 0, 0.7) url(Images/cryptocurrency.jpg);
+  height: 320px;
+  width: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 45px;
+
+    p {
+      visibility: hidden;
+      color: $primary-text-color;
+      padding: 30px;
+    }
+
+}
+
+.thumb6:hover {
+  top: -2px;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-blend-mode: darken;
+    p {
+      visibility: visible;
+    }
+}
+
+
+.footer {
+  border-top: 1px solid grey;
+  height: auto;
+  flex: none;
+  padding: 20px 0 20px 0;
+  box-sizing: inherit;
+  color: #bf3261;
+}
+
+.footer-box {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
   
+.contact-footer {
+  font-family :$spicy-font;
+    a {
+      text-decoration: none;
+    }
+      &:hover {
+        border-bottom: 2px  solid $primary-text-color;
+      } 
+}
+
+
+.favicons {
+  display: flex;
+  gap: 14px;
+    ul {
+      list-style: none;
+    }
+}
+
+
+
+
+@import '_Contact';
+
+@import '_About';
+
+@import '_Work';
+
+@import '_Blog';
+
+
+
+@media only screen and (max-width: 850px) {
+
+  @import '_tablet';
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  @import '_mobile';
+
+}
+
+
+
+@media only screen and (min-width: 850px) {
+
+  #menu-button {
+    display: none;
   }
 
-
-  
-  
+}

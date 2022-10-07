@@ -1,9 +1,32 @@
+.container {
+  width: 90%;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar nav {
+  padding: 30px 0 10px 0;
+  position: fixed;
+  background-color: #41295a;
+  z-index: 2;
+  padding: 12px 0 12px 0;
+  width: 100%;
+}
+
+.name {
+  margin-left: 20px;
+    a {
+      font-size: 1em;
+    }
+}
+
 .band {
   grid-template-columns: 1fr 1fr;
 }
 
-
-#menu-button + .menu {
+#menu-button+.menu {
   visibility: hidden;
   opacity: 0;
   display: none;
@@ -12,39 +35,45 @@
 
 .menu {
   position: relative;
+
 }
 
 .menu2 {
   font-size: 40px;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   justify-content: center;
-  background-color: rgb(9, 4, 74);
-  opacity: 0.9;
-  width: 100%;
-  height: 100vh;
-  top: -40px;
-  left: -35px;
+  background: -webkit-linear-gradient(top left, #202587, #1813BF);
+  width: 50%;
+  top: 0;
+  right: 0;
   text-align: center;
   z-index: 1;
-  position: fixed;
+  padding: 40px 0 40px 0;
+  margin: 0;
+  border-bottom-left-radius: 45px;
+
+
 }
 
 .menu2 li {
-  display: inline;
   list-style: none;
-  font-size: 50px;
-  transition: all 0.3s ease 0s;
+  font-size: 25px;
+
+
 }
 
-#menu-button.menu-open + .menu {
+#menu-button.menu-open+.menu {
   visibility: visible;
   display: contents;
+
 }
 
-#menu-button.menu-open + .menu2 {
+#menu-button.menu-open+.menu2 {
   visibility: visible;
   display: contents;
+
+
 }
 
 #menu-button {
@@ -52,18 +81,18 @@
   border: 0;
   cursor: pointer;
   z-index: 2;
-  position: absolute;
-  right: 80px;
+  margin-right: 20px;
 }
 
 #menu-button.menu-open {
-  position: fixed;
-  top: 40px;
+  position: absolute;
+  right: 43px;
+  top: 25px;
 }
 
 #menu-button span {
-  width: 50px;
-  height: 8px;
+  width: 40px;
+  height: 5px;
   margin-bottom: 7px;
   border-radius: 7px;
   display: block;
@@ -85,15 +114,73 @@
 }
 
 #menu-button.menu-open span:nth-child(1n) {
-  transform:rotate(45deg);
-  right: 10px;
+  transform: rotate(45deg);
 }
 
 #menu-button.menu-open span:nth-child(3n) {
-  transform:rotate(-45deg);
- 
+  transform: rotate(-45deg);
 }
 
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 0;
+  gap: 10px;
+}
 
+.Alex-box {
+  font-size: 2em;
+}
 
+.title-box span {
+  font-size: 50px;
+}
 
+.title-box2 {
+  font-size: 2em;
+}
+
+//About
+
+.intro {
+  margin-top: 82px;
+    
+    article p {
+      font-size: 1.3em;
+      margin: 30px 0 30px 0;
+    }
+}
+
+.container-about {
+  width: 90%;
+}
+
+.madeira {
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
+}
+
+.Dork {
+  width: 150px;
+  height: auto;
+}
+
+//Contact
+
+.contact-section {
+  margin-top: 100px;
+}
+
+.contact-container {
+  width: 80%;
+}
+
+//Work
+
+.Work-in-progress h1 {
+
+  font-size: 2.5rem;
+  margin-top: 150px;
+
+}

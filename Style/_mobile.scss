@@ -1,10 +1,12 @@
+.container-about {
+  width: 80%;
+}
 
-.container {
-  width: 90%;
+.intro {
+  margin-top: 80px;
 }
 
 .navbar nav {
-  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,24 +15,34 @@
   max-width: 1400px;
 }
 
-#menu-button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  z-index: 2;
-  position: absolute;
-  right:18px;
+
+
+.menu2 {
+  width: 73%;
 }
 
-.title div h1 {
-  font-size: 25px;
-  color: #2EE59D;
-  line-height: 1.4;
+.waviy {
+  -webkit-box-reflect: below -10px linear-gradient(transparent, rgba(0,0,0,.2));
 }
 
-.title div h1 span {
-  font-family: 'Bungee Spice', cursive;
+.title {
+  margin-bottom: 75px;
+}
+
+.contact-me {
+  margin-bottom: 75px;
+}
+
+.Alex-box {
+  font-size: 1.7em;
+}
+
+.title-box span {
   font-size: 35px;
+}
+
+.title-box2 {
+  font-size: 1.7em;
 }
 
 .band {
@@ -46,4 +58,161 @@
   visibility: visible;
   width: 40px;
   height: 40px;
+}
+
+/* .name:hover {
+  background-color: transparent;
+  padding: 0;
+  transform: none;
+  box-shadow: none;
+  transition: none;
+  padding: 0;
+  margin: 0;
+} */
+
+//About
+
+.Dork {
+  height: auto;
+  width: 40%;
+  float: left;
+  margin-right: 0;
+  border-radius: 45px;
+  margin: 10px;
+}
+
+.madeira {
+  height: auto;
+  width: 100%;
+  border-radius: 45px;
+  float: right;
+  margin-left: 0;
+  margin: 10px;
+}
+
+.intro article p {
+  font-size: pxToEM(15);
+  margin: 0 0 30px 0;
+}
+
+//Contact
+
+.contact-container {
+  border-radius: 45px;
+  background-color: rgb(9, 4, 74);
+  padding: 40px;
+  width: 70%;
+
+  label {
+    font-family: $spicy-font;
+    font-size: 1em;
+  }
+
+}
+
+
+.contact-section {
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+input[type=text],
+select,
+textarea {
+  font-size: 1em;
+}
+
+//Work
+
+.Work-in-progress h1 {
+
+  font-size: 2rem;
+  margin-top: 150px;
+}
+
+.skills-bar-container {
+  margin: 0 0px 150px 17px;
+}
+
+//Blog
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+      margin-top: 100px;
+      text-align: center;
+      display: inherit;
+      justify-content: center;
+      font-family: $spicy-font;
+      font-size: 2em;
+  }
+}
+
+.blog-content {
+  grid-template-columns: 1fr;
+}
+
+.aside-blog {
+  display: none; 
+}
+
+.blog1 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
+}
+
+.blog2 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
+}
+
+.blog3 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
+}
+
+.blog4 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
+}
+
+.blog5 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
+}
+
+.blog6 {
+  height: 250px;
+      div {
+          height: 100%;
+          width: 100%;
+          transition:none;
+      }
 }
