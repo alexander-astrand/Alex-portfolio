@@ -120,7 +120,6 @@ body {
   position: relative;
   -webkit-box-reflect: below -30px linear-gradient(transparent, rgba(0,0,0,.2));
   font-size: 0;
-  gap: 10px;
 }
 
 .waviy span {
@@ -151,7 +150,7 @@ body {
 .Alex-box {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 27px;
   font-size: 3rem;
   color: $primary-text-color;
   line-height: 1.4;
